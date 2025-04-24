@@ -8,22 +8,55 @@
     <title>Générateur - Mots de Passe</title>
   </head>
   <body>
-
     <article>
-        <!-- Onclick → Appelle la fonction genererMdp -->
+      <!-- Onclick → Appelle la fonction genererMdp -->
       <button id="generateur-mdp" onclick="genererMdp()">Générer un MDP</button>
 
       <input
         type="number"
+        name="nombre-voulu"
+        id="nombre-voulu"
         min="12"
         max="128"
-        id="nombre-voulu"
         placeholder="Nombre caractères souhaités"
         required
       />
 
-      <label>ici</label>
-      <input type="checkbox"/>
+      <label> 
+        Majuscules
+        <input 
+        type="checkbox" 
+        name="selection" 
+        class="selection"
+      />
+    </label>
+
+    <label> 
+        Minuscules
+        <input 
+        type="checkbox" 
+        name="selection" 
+        class="selection"
+      />
+    </label>
+
+    <label> 
+        Chiffres
+        <input 
+        type="checkbox" 
+        name="selection" 
+        class="selection"
+      />
+    </label>
+
+    <label> 
+        Symboles
+        <input 
+        type="checkbox" 
+        name="selection" 
+        class="selection"
+      />
+    </label>
 
       <p id="resultat-mdp"></p>
     </article>
