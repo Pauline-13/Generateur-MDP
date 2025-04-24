@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/vnd.icon" href="Images/FavIcone.png" />
+    <title>Générateur - Mots de Passe</title>
+  </head>
+  <body>
+
+    <article>
+        <!-- Onclick → Appelle la fonction genererMdp -->
+      <button id="generateur-mdp" onclick="genererMdp()">Générer un MDP</button>
+
+      <input
+        type="number"
+        min="12"
+        max="128"
+        id="nombre-voulu"
+        placeholder="Nombre caractères souhaités"
+        required
+      />
+
+      <label>ici</label>
+      <input type="checkbox"/>
+
+      <p id="resultat-mdp"></p>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>
