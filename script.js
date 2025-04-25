@@ -89,7 +89,9 @@ let symboles = [
   "²",
 ];
 
+
 /* ---------------------- FONCTIONS -------------------------- */
+
 function genererMdp() {
   // Récupére le nombre de caractères souhaités ↓
   const nombreCaracteres = parseInt(
@@ -104,7 +106,6 @@ function genererMdp() {
 
   // Créer un tableau vide pour sélectionner le type de caractère souhaité ↓
   let totalCaracteres = [];
-
 
   // Vérifie quelle case est cochée et ajoute les catégories correspondantes ↓
   if (document.getElementById("majuscules").checked) {

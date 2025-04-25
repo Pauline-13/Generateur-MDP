@@ -5,69 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/vnd.icon" href="Images/FavIcone.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Fuzzy+Bubbles:wght@400;700&family=Monofett&family=Rubik+Microbe&family=Tilt+Prism&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
     <title>Générateur - Mots de Passe</title>
   </head>
-  <body>
-    <main>
-      <h1 id="titre">Générateur de mots de passe sécurisés</h1>
 
-      <!-- Onclick → Appelle la fonction genererMdp -->
-      <button id="generateur-mdp" onclick="genererMdp()"> Générer un MDP </button>
+  <body>
+
+    <div class="video-background">
+      <video autoplay loop muted>
+        <source src="Images/Background.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <main id="container-generateur">
+      <h1 id="titre">Génére ton mot de passe !</h1>
+
 
       <div id="checkbox">
-      <label> 
-        Majuscules
-        <input 
-        type="checkbox" 
-        name="selection" 
-        id="majuscules"
-        class="selection"
-      />
-    </label>
+        <label>
+          <input
+            type="checkbox"
+            name="selection"
+            id="majuscules"
+            class="selection"
+          />
+          Majuscules
+        </label>
 
-    <label> 
-        Minuscules
-        <input 
-        type="checkbox" 
-        name="selection" 
-        id="minuscules"
-        class="selection"
-      />
-    </label>
+        <label>
+          <input
+          type="checkbox"
+          name="selection"
+          id="minuscules"
+          class="selection"
+          />
+          Minuscules
+        </label>
 
-    <label> 
-        Chiffres
-        <input 
-        type="checkbox" 
-        name="selection" 
-        id="chiffres"
-        class="selection"
-      />
-    </label>
+        <label>
+          <input
+          type="checkbox"
+          name="selection"
+          id="chiffres"
+          class="selection"
+          />
+          Chiffres
+        </label>
 
-    <label> 
-        Symboles
-        <input 
-        type="checkbox" 
-        name="selection"
-        id="symboles" 
-        class="selection"
-      />
-    </label>
-  </div>
+        <label>
+          <input
+          type="checkbox"
+          name="selection"
+          id="symboles"
+          class="selection"
+          />
+          Symboles
+        </label>
+      </div>
 
-    <input
+      <input
         type="number"
         name="nombre-voulu"
         id="nombre-voulu"
         min="12"
         max="128"
-        placeholder="Nombre caractères souhaités"
+        placeholder="Nombre entre 12 et 128"
         required
       />
 
+      <!-- Onclick → Appelle la fonction genererMdp -->
+      <button id="generateur-mdp" onclick="genererMdp()">Générer</button>
+
       <p id="resultat-mdp"></p>
+      <!-- <button id="copie-colle">
+        <img src="Images/icons8-copier-coller-100.png" height="50" >
+      </button> -->
     </main>
+
 
     <script src="script.js"></script>
   </body>
