@@ -8,25 +8,19 @@
     <title>Générateur - Mots de Passe</title>
   </head>
   <body>
-    <article>
+    <main>
+      <h1 id="titre">Générateur de mots de passe sécurisés</h1>
+
       <!-- Onclick → Appelle la fonction genererMdp -->
-      <button id="generateur-mdp" onclick="genererMdp()">Générer un MDP</button>
+      <button id="generateur-mdp" onclick="genererMdp()"> Générer un MDP </button>
 
-      <input
-        type="number"
-        name="nombre-voulu"
-        id="nombre-voulu"
-        min="12"
-        max="128"
-        placeholder="Nombre caractères souhaités"
-        required
-      />
-
+      <div id="checkbox">
       <label> 
         Majuscules
         <input 
         type="checkbox" 
         name="selection" 
+        id="majuscules"
         class="selection"
       />
     </label>
@@ -36,6 +30,7 @@
         <input 
         type="checkbox" 
         name="selection" 
+        id="minuscules"
         class="selection"
       />
     </label>
@@ -45,6 +40,7 @@
         <input 
         type="checkbox" 
         name="selection" 
+        id="chiffres"
         class="selection"
       />
     </label>
@@ -53,13 +49,25 @@
         Symboles
         <input 
         type="checkbox" 
-        name="selection" 
+        name="selection"
+        id="symboles" 
         class="selection"
       />
     </label>
+  </div>
+
+    <input
+        type="number"
+        name="nombre-voulu"
+        id="nombre-voulu"
+        min="12"
+        max="128"
+        placeholder="Nombre caractères souhaités"
+        required
+      />
 
       <p id="resultat-mdp"></p>
-    </article>
+    </main>
 
     <script src="script.js"></script>
   </body>

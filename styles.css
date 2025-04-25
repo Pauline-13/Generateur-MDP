@@ -7,3 +7,17 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    border: 2px solid darkgreen;
+    background-color: rgb(211, 206, 199);
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
