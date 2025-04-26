@@ -7,7 +7,7 @@
     <link rel="icon" type="image/vnd.icon" href="Images/FavIcone.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Fuzzy+Bubbles:wght@400;700&family=Monofett&family=Rubik+Microbe&family=Tilt+Prism&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Fuzzy+Bubbles:wght@400;700&family=Give+You+Glory&family=Handlee&family=Monofett&family=Rubik+Microbe&family=Syncopate:wght@400;700&family=Tilt+Prism&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
     <title>Générateur - Mots de Passe</title>
   </head>
 
@@ -18,71 +18,93 @@
         <source src="Images/Background.mp4" type="video/mp4">
       </video>
     </div>
+    
+    <nav>
+    <h1 id="titre">
+      Génère ton <span id="mot-hover">mdp</span>
+    </h1></nav>
+    
+    
+
+    <!-- <h1 id="titre">Génére ton mot de passe !</h1> -->
 
     <main id="container-generateur">
-      <h1 id="titre">Génére ton mot de passe !</h1>
 
-
+<p class="titre-container">I • Sélectionne le type de caractère :</p>
       <div id="checkbox">
         <label>
           <input
             type="checkbox"
-            name="selection"
+            name="caracteres"
             id="majuscules"
-            class="selection"
+            class="caracteres"
           />
+          <br>
           Majuscules
         </label>
 
         <label>
           <input
           type="checkbox"
-          name="selection"
+          name="caracteres"
           id="minuscules"
-          class="selection"
+          class="caracteres"
           />
+          <br>
           Minuscules
         </label>
 
         <label>
           <input
           type="checkbox"
-          name="selection"
+          name="caracteres"
           id="chiffres"
-          class="selection"
+          class="caracteres"
           />
+          <br>
           Chiffres
         </label>
 
         <label>
           <input
           type="checkbox"
-          name="selection"
+          name="caracteres"
           id="symboles"
-          class="selection"
+          class="caracteres"
           />
+          <br>
           Symboles
         </label>
       </div>
 
+      <hr>
+
+      <p class="titre-container">II • Sélectionne le nombre de caractère :</p>
       <input
         type="number"
         name="nombre-voulu"
         id="nombre-voulu"
         min="12"
         max="128"
-        placeholder="Nombre entre 12 et 128"
+        placeholder="Entre 12 et 128"
         required
       />
 
       <!-- Onclick → Appelle la fonction genererMdp -->
       <button id="generateur-mdp" onclick="genererMdp()">Générer</button>
 
+      <hr>
+
+      <p class="titre-container">III • récupère ton mot de passe :</p>
       <p id="resultat-mdp"></p>
       <!-- <button id="copie-colle">
         <img src="Images/icons8-copier-coller-100.png" height="50" >
       </button> -->
     </main>
+
+    <footer>
+      <p id="texte-footer"> © Site réalisé dans un projet de formation par Pauline Tincq | 2025</p>
+    </footer>
 
 
     <script src="script.js"></script>

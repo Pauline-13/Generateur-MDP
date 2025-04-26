@@ -142,3 +142,53 @@ function genererMdp() {
   // Affiche le MDP dans la balise <p> ↓
   document.getElementById("resultat-mdp").textContent = motDePasse;
 }
+
+const motSpan = document.getElementById("mot-hover");
+const court = "mdp";
+const long = "mot-de-passe";
+let animationTimeouts = []; // stocke tous les timeouts pour pouvoir les annuler
+
+function clearAnimations() {
+  animationTimeouts.forEach(timeout => clearTimeout(timeout));
+  animationTimeouts = [];
+  motSpan.innerHTML = "";
+}
+
+motSpan.addEventListener("mouseenter", () => {
+  clearAnimations();
+
+  for (let i = 0; i < long.length; i++) {
+    const timeout = setTimeout(() => {
+      const lettre = document.createElement("span");
+      lettre.textContent = long[i];
+      lettre.classList.add("lettre-mdp");
+      motSpan.appendChild(lettre);
+    }, i * 80);
+
+    animationTimeouts.push(timeout);
+  }
+});
+
+motSpan.addEventListener("mouseleave", () => {
+  animationTimeouts.forEach(timeout => clearTimeout(timeout));
+
+  const lettres = motSpan.querySelectorAll("span");
+
+  [...lettres].reverse().forEach((lettre, i) => {
+    const timeout = setTimeout(() => {
+      lettre.style.animation = "pop-out 0.3s ease forwards";
+    }, i * 80);
+
+    animationTimeouts.push(timeout);
+  });
+
+  // Après disparition → remettre "MDP"
+  const totalDelay = lettres.length * 80 + 300;
+  const resetTimeout = setTimeout(() => {
+    motSpan.textContent = court;
+    animationTimeouts = [];
+  }, totalDelay);
+
+  animationTimeouts.push(resetTimeout);
+});
+
