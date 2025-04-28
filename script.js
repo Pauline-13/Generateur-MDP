@@ -147,6 +147,7 @@ function genererMdp() {
   document.getElementById("resultat-mdp").textContent = motDePasse;
 }
 
+
 /* ------------------ ANIMATION TITRE ---------------------- */
 
 /*const motSpan = document.getElementById("mot-hover");
