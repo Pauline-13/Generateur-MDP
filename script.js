@@ -137,13 +137,19 @@ function genererMdp() {
       totalCaracteres[Math.floor(Math.random() * totalCaracteres.length)];
     // Ajoute le caractère au MDP ↓
     motDePasse += caractereAleatoire;
+
+    // Permet de défiler jusqu'au résultat lorsqu'on clique sur le bouton 
+    const resultatMdp = document.getElementById("resultat-mdp");
+      resultatMdp.scrollIntoView({ behavior: "smooth" });
   }
 
   // Affiche le MDP dans la balise <p> ↓
   document.getElementById("resultat-mdp").textContent = motDePasse;
 }
 
-const motSpan = document.getElementById("mot-hover");
+/* ------------------ ANIMATION TITRE ---------------------- */
+
+/*const motSpan = document.getElementById("mot-hover");
 const court = "mdp";
 const long = "mot-de-passe";
 let animationTimeouts = []; // stocke tous les timeouts pour pouvoir les annuler
@@ -190,5 +196,5 @@ motSpan.addEventListener("mouseleave", () => {
   }, totalDelay);
 
   animationTimeouts.push(resetTimeout);
-});
+});*/
 
