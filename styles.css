@@ -239,15 +239,21 @@ footer {
 
 @media screen and (max-width: 480px) {
 
+  .video-background {
+    z-index: -1;
+  }
+
   #titre {
     font-size: 50px;
     border-radius: 0px 0px 5px 5px;
     padding: 0px;
+    z-index: 1;
   }
 
   #container-generateur {
     height: 900px;
     width: 80%;
+    z-index: 1;
   }
 
   .titre-container {
@@ -288,7 +294,7 @@ footer {
   }
 
   #nombre-voulu {
-    width: 75%;
+    width: 70%;
     height: 80px;
     font-size: 20px;
     margin-bottom: 20px;
@@ -307,6 +313,10 @@ footer {
   #resultat-mdp {
     font-size: 18px;
     margin-top: 10px;
+  }
+
+  #texte-footer {
+    z-index: 1;
   }
 }
 
